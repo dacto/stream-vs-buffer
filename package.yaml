@@ -1,0 +1,30 @@
+name:    stream-vs-buffer
+version: "0.0.1"
+
+dependencies:
+- base >=4.9.1.0 && <5
+- yesod-core >=1.6 && <1.7
+- bytestring >=0.10 && <0.11
+- text >=0.11 && <2.0
+- persistent >=2.9 && <2.10
+- persistent-sqlite >=2.9 && <2.10
+- persistent-template >=2.5 && <2.9
+- aeson >=1.4 && <1.5
+- conduit >=1.0 && <2.0
+- monad-logger >=0.3 && <0.4
+- unordered-containers
+- containers
+- wai
+- yesod-persistent
+
+# Runnable executable for our application
+executables:
+  stream-vs-buffer:
+    main: Main.hs
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+
